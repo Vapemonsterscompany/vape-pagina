@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Productos</title>
+</head>
+<body>
+	<label for="categorias">Categorías:</label>
+	<select id="categorias">
+		<option value="todos">Todos</option>
+		<option value="electrónica">Electrónica</option>
+		<option value="ropa">Ropa</option>
+		<option value="hogar">Hogar</option>
+	</select>
+
+	<div id="productos">
+		<!-- Aquí van los productos -->
+	</div>
+
+	<script>
+		var productos = [
+			{nombre: "Laptop", categoria: "electrónica"},
+			{nombre: "Camiseta", categoria: "ropa"},
+			{nombre: "Toalla", categoria: "hogar"},
+			{nombre: "Smartphone", categoria: "electrónica"},
+			{nombre: "Pantalón", categoria: "ropa"},
+			{nombre: "Cortina", categoria: "hogar"}
+		];
+
+		var productosDiv = document.getElementById("productos");
+		var categoriasSelect = document.getElementById("categorias");
+
+		categoriasSelect.addEventListener("change", function() {
+			var categoriaSeleccionada = categoriasSelect.value;
+
+			// Filtrar los productos por categoría
+			var productosFiltrados = productos.filter(function(producto) {
+				if (categoriaSeleccionada === "todos") {
+					return true;
+				} else {
+					return producto.categoria === categoriaSeleccionada;
+				}
+			});
+
+			// Limpiar el div de productos
+			productosDiv.innerHTML = "";
+
+			// Agregar los productos filtrados al div
+			productosFiltrados.forEach(function(producto) {
+				productosDiv.innerHTML += "<p>" + producto.nombre + "</p>";
+			});
+		});
+	</script>
+</body>
+</html>

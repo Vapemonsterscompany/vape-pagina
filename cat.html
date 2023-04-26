@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- metadatos del web site -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="biblioteca en linea con PDF's de todo tipo">
+	<meta name="keywords" content="book, ebook, pdf, word, libro, documento, biblioteca">
+	<title>Bookpedia | Cátegorias</title>
+	<!-- icono del web site -->
+	<link rel="icon" href="img/logo-2.png">
+	<!-- Hoja de estilo css personal -->
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+	<!-- Ultima compilacion min.css de Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<!-- ultima compilacion de FontAwesome -->
+	<script src="https://kit.fontawesome.com/ea9b6ffb65.js"></script>
+</head>
+
+<body>
+	<!-- barra de información y login -->
+	<div class="container-fluid bg-dark info-bar">
+		<div class="row py-2">
+			<div class=" row col-lg-6 d-none d-md-none d-lg-inline-block">
+				<a href="#"><i class="fas fa-phone"></i> Tel: (664)312-6757</a>
+				<a href="#"><i class="fas fa-at"></i> bookpedia@contact.com</a>
+			</div>
+
+			<div class=" row col-12 col-lg-6 justify-content-end">
+				<a data-toggle="modal" data-target="#registro" href="#">
+					<i class="fas fa-user-edit"></i> Registrarme
+				</a>
+				<a data-toggle="modal" data-target="#logearse" href="#">
+					<i class="fas fa-user"></i> Logín
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- ventana pop-up de login -->
+	<div class="modal fade" id="logearse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="logearse">Login</h5>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Correo :</label>
+							<input type="email" class="form-control" id="logMail" required>
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="col-form-label">Password :</label>
+							<input type="password" class="form-control" id="logPass" required>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="remember">
+							<label class="form-check-label" for="remember">
+								Recordar
+							</label>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+							<input type="submit" class="btn btn-warning" value="Ingresar">
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- ventana pop-up de registro -->
+	<div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="registro">Registro</h5>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Usuario :</label>
+							<input type="text" class="form-control" id="regUser" required>
+						</div>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Correo :</label>
+							<input type="email" class="form-control" id="regMail" required>
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="col-form-label">Password :</label>
+							<input type="password" name="" class="form-control" id="regPass" required>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+							<input type="submit" class="btn btn-warning" value="Registrarme">
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- /registro de usuario -->
+<!-- /Barra de información  -->
+
+<!-- Barra de Navegacion -->
+	<nav class="navbar navbar-expand-md navbar-light text-center bg-sandstorm nav-size sticky-top">
+		<!-- Logotipo del websaite -->
+		<a class="navbar-brand logo-text" href="index.html" style="color: #000;">
+			<img class="logo-img" src="img/logo.png" alt="logo"> Bookpedia
+		</a>
+		<!-- botón del menú desplegable movíl -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+			<i class="fas fa-caret-down size-menu"></i>
+		</button>
+		<!--  Contenido de la Barra de navegación -->
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown bg-sandstorm">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Catégorias
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="categorias.html">Terror</a>
+						<a class="dropdown-item" href="categorias.html">Guias | Manuales</a>
+						<a class="dropdown-item" href="categorias.html">Filósofia</a>
+						<a class="dropdown-item" href="categorias.html">Nóvelas</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contacto.html">Contácto</a>
+				</li>
+
+			</ul>
+
+			<!-- cuadro de busqueda -->
+			<form class="form-inline my-2 my-lg-0 justify-content-center">
+				<input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+				<button class="btn btn-outline-dark d-none d-md-block ml-n2 my-2 my-sm-0" type="submit">
+					<i class="fas fa-search"></i>
+				</button>
+				<button class="btn btn-outline-dark d-block d-md-none ml-n2 my-2 my-sm-0" type="submit">
+					Búscar
+				</button>
+			</form>
+		</div>
+	</nav>
+<!-- /barra de navegación -->
+
+<!-- Contenido -->
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+		<li class="breadcrumb-item"><a href="index.html">Categorias</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Terror</li>
+	</ol>
+</nav>
+
+<div class="container-fluid py-4">
+	<div class="container">
+		<h2>Cátegorias</h2>
+	</div>
+	<div class="container-fluid">
+		<div class="container">
+			<h4>Terror</h4>
+		</div>
+	<hr class="separador">	
+	</div>
+
+<!-- libros -->
+	<div class="container">
+		<!-- Row PDF book -->
+		<div class="row justify-content-center py-2">
+				<!-- libro 1 -->
+				<div class="card-book mr-3">
+					<!-- portada -->
+					<div class="front pt-3">
+						<img src="img/libros/El-resplandor-stephen-king.jpg" class="img-fluid" alt="">
+					</div>
+					<!-- descripcion -->
+					<div class="back pt-3">
+						<div class="back-content py-2 m-auto book">
+							<h4>El Resplandor</h4>
+							<span>El resplandor es la tercera novela de terror del escritor estadounidense Stephen King, publicada en 1977. El título se inspiró en la canción de John Lennon "Instant Karma!"</span>
+							<div class="py-4">
+								<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- libro 2 -->
+				<div class="card-book mr-3">
+					<!-- portada -->
+					<div class="front pt-3">
+						<img src="img/libros/El-susurrador-en-la-oscuridad-hp-lovecraft.jpg" class="img-fluid" alt="">
+					</div>
+					<!-- descripcion -->
+					<div class="back pt-3">
+						<div class="back-content py-2 m-auto book">
+							<h4>El Susurrador en la Oscuridad</h4>
+							<span>El que susurra en la oscuridad es una novela corta de 26 000 palabras escrita por H. P. Lovecraft en 1930 y publicada en agosto de 1931 en Weird Tales, con una mezcla de Terror y Ciencia Ficcion.</span>
+							<div class="py-4">
+								<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- libro 3 -->
+				<div class="card-book mr-3">
+					<!-- portada -->
+					<div class="front pt-3">
+						<img src="img/libros/El-templo-hp-lovecraft.jpg" class="img-fluid" alt="">
+					</div>
+					<!-- descripcion -->
+					<div class="back pt-3">
+						<div class="back-content py-2 m-auto book">
+							<h4>El Templo</h4>
+							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur illo qui voluptatum sit eaque, odio iusto placeat tenetur, eius rem.</span>
+							<div class="sm py-2">
+								<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- libro 4 -->
+				<div class="card-book mr-3">
+					<!-- portada -->
+					<div class="front pt-3">
+						<img src="img/libros/LA-LLAMADA-FRONTAL-BILINGUE-copia-600x0.jpg" class="img-fluid" alt="">
+					</div>
+					<!-- Descripción-->
+					<div class="back pt-3">
+						<div class="back-content py-2 m-auto book">
+							<h4>La Llamada de Cthulhu</h4>
+							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eius similique accusantium quos obcaecati hic, autem soluta inventore? Id, quas.</span>
+							<div class="sm py-2">
+								<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /row books -->
+		<div class="row justify-content-center py-2">
+			<!-- libro 1 -->
+			<div class="card-book mr-3">
+				<!-- portada -->
+				<div class="front pt-3">
+					<img src="img/libros/Lovecraft-El-color-que-cayo-del-cielo_03_ESP.jpg" class="img-fluid" alt="">
+				</div>
+				<!-- descripcion -->
+				<div class="back pt-3">
+					<div class="back-content py-2 m-auto book">
+					<h4>El Color que Cayo del Cielo</h4>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ipsa pariatur blanditiis et adipisci consectetur possimus culpa praesentium voluptatem maxime!</span>
+						<div class="sm py-2">
+							<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- libro 2 -->
+			<div class="card-book mr-3">
+				<!-- portada -->
+				<div class="front pt-3">
+					<img src="img/libros/el-caso-de-charles-dexter-ward.jpg" class="img-fluid" alt="">
+				</div>
+				<!-- descripcion -->
+				<div class="back pt-3">
+					<div class="back-content py-2 m-auto book">
+						<h4>El Caso de Charles Dexter</h4>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id eum modi commodi possimus adipisci provident est nisi nesciunt soluta cum.</span>
+						<div class="sm py-2">
+							<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- libro 3 -->
+			<div class="card-book mr-3">
+				<!-- portada -->
+				<div class="front pt-3">
+					<img src="img/libros/El-ceremonial-hp-lovecraft.jpg" class="img-fluid" alt="">
+				</div>
+				<!-- descripcion -->
+				<div class="back pt-3">
+					<div class="back-content py-2 m-auto book">
+						<h4>El Ceremonial</h4>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur illo qui voluptatum sit eaque, odio iusto placeat tenetur, eius rem.</span>
+						<div class="sm py-2">
+							<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- libro 4 -->
+			<div class="card-book mr-3">
+				<!-- portada -->
+				<div class="front pt-3">
+					<img src="img/libros/El-alquimista-hp-lovecraft.jpg" class="img-fluid" alt="">
+				</div>
+				<!-- Descripción-->
+				<div class="back pt-3">
+					<div class="back-content py-2 m-auto book">
+						<h4>El Alquimista</h4>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eius similique accusantium quos obcaecati hic, autem soluta inventore? Id, quas.</span>
+						<div class="sm py-2">
+							<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- /row books -->
+	<div class="row justify-content-center py-2">
+		<!-- libro 1 -->
+		<div class="card-book mr-3">
+			<!-- portada -->
+			<div class="front pt-3">
+				<img src="img/libros/Dagon-hp-lovecraft.jpg" class="img-fluid" alt="">
+			</div>
+			<!-- descripcion -->
+			<div class="back pt-3">
+				<div class="back-content py-2 m-auto book">
+					<h4>Dagon</h4>
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ipsa pariatur blanditiis et adipisci consectetur possimus culpa praesentium voluptatem maxime!</span>
+					<div class="sm py-2">
+						<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- libro 2 -->
+		<div class="card-book mr-3">
+			<!-- portada -->
+			<div class="front pt-3">
+				<img src="img/libros/Lovecraft - La llave de plata.jpg" class="img-fluid" alt="">
+			</div>
+			<!-- descripcion -->
+			<div class="back pt-3">
+				<div class="back-content py-2 m-auto book">
+					<h4>La Llave de Plata</h4>
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id eum modi commodi possimus adipisci provident est nisi nesciunt soluta cum.</span>
+					<div class="sm py-2">
+						<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- libro 3 -->
+		<div class="card-book mr-3">
+			<!-- portada -->
+			<div class="front pt-3">
+				<img src="img/libros/La-sombra-sobre-Innsmouth.jpg" class="img-fluid" alt="">
+			</div>
+			<!-- descripcion -->
+			<div class="back pt-3">
+				<div class="back-content py-2 m-auto book">
+					<h4>La Sombra Sobre Innsmouth</h4>
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur illo qui voluptatum sit eaque, odio iusto placeat tenetur, eius rem.</span>
+					<div class="sm py-2">
+						<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- libro 4 -->
+		<div class="card-book mr-3">
+			<!-- portada -->
+			<div class="front pt-3">
+				<img src="img/libros/necromicom.jpg" class="img-fluid" alt="">
+			</div>
+			<!-- Descripción-->
+			<div class="back pt-3">
+				<div class="back-content py-2 m-auto book">
+					<h4>El Necronomicon</h4>
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eius similique accusantium quos obcaecati hic, autem soluta inventore? Id, quas.</span>
+					<div class="sm py-2">
+						<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- /row books -->
+<div class="row justify-content-center py-2">
+	<!-- libro 1 -->
+	<div class="card-book mr-3">
+		<!-- portada -->
+		<div class="front pt-3">
+			<img src="img/libros/La_casa_maldita.jpg" class="img-fluid" alt="">
+		</div>
+		<!-- descripcion -->
+		<div class="back pt-3">
+			<div class="back-content py-2 m-auto book">
+				<h4>La Casa Maldita</h4>
+				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ipsa pariatur blanditiis et adipisci consectetur possimus culpa praesentium voluptatem maxime!</span>
+				<div class="sm py-2">
+					<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- libro 2 -->
+	<div class="card-book mr-3">
+		<!-- portada -->
+		<div class="front pt-3">
+			<img src="img/libros/la-sombra-fuera-del-tiempo.jpg" class="img-fluid" alt="">
+		</div>
+		<!-- descripcion -->
+		<div class="back pt-3">
+			<div class="back-content py-2 m-auto book">
+				<h4>La Sombra Fuera del Tiempo</h4>
+				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id eum modi commodi possimus adipisci provident est nisi nesciunt soluta cum.</span>
+				<div class="sm py-2">
+					<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- libro 3 -->
+	<div class="card-book mr-3">
+		<!-- portada -->
+		<div class="front pt-3">
+			<img src="img/libros/Los otros dioses.jpg" class="img-fluid" alt="">
+		</div>
+		<!-- descripcion -->
+		<div class="back pt-3">
+			<div class="back-content py-2 m-auto book">
+				<h4>Los Otros Dioses</h4>
+				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur illo qui voluptatum sit eaque, odio iusto placeat tenetur, eius rem.</span>
+				<div class="sm py-2">
+					<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- libro 4 -->
+	<div class="card-book mr-3">
+		<!-- portada -->
+		<div class="front pt-3">
+			<img src="img/libros/el-horro-dunwich.jpg" class="img-fluid" alt="">
+		</div>
+		<!-- Descripción-->
+		<div class="back pt-3">
+			<div class="back-content py-2 m-auto book">
+				<h4>El Horror de Dunwich</h4>
+				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eius similique accusantium quos obcaecati hic, autem soluta inventore? Id, quas.</span>
+				<div class="sm py-2">
+					<a href="books.html" class="btn btn-dark btn-outline-warning">Ver</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /row books -->
+</div>
+	<hr class="separador mt-5">
+</div>
+<div class="container-fluid">
+	<nav aria-label="Page navigation example">
+	  <ul class="pagination pagination-md justify-content-center">
+	    <li class="page-item">
+	      <a class="page-link" href="#" aria-label="Previous">
+	        <span aria-hidden="true">«</span>
+	      </a>
+	    </li>
+	    <li class="page-item"><a class="page-link" href="#">1</a></li>
+	    <li class="page-item"><a class="page-link" href="#">2</a></li>
+	    <li class="page-item"><a class="page-link" href="#">3</a></li>
+	    <li class="page-item">
+	      <a class="page-link" href="#" aria-label="Next">
+	        <span aria-hidden="true">»</span>
+	      </a>
+	    </li>
+	  </ul>
+	</nav>
+</div>
+
+<!-- /Contenido -->
+
+	<!-- footer -->
+	<footer>
+		<!-- newsletter -->
+		<div class="container-fluid bg-dark pt-4 py-5">
+			<div class="container">
+				<form>
+					<div class="row text-white">
+						<div class="col-12 text-center">
+							<h1>Newsletter</h1>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-12 col-md-5 py-3">
+							<input type="text" class="form-control" placeholder="Nombre" required>
+						</div>
+						<div class="col-12 col-md-5 py-3">
+							<input type="email" class="form-control" placeholder="Correo" required>
+						</div>
+						<div class="py-3">
+							<input type="submit" class="btn btn-dark btn-outline-warning" value="Enviar">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- /newsletter -->
+		<div class="container-fluid bg-gunmetal d-none d-md-block text-white py-4">
+			<div class="container">
+				<!-- Información en linea -->
+				<div class="row">
+					<div class="container col-7 col-md-5 foot">
+						<h5>Contácto</h5>
+						<ul class="list-unstyled">
+							<li><a href="#"><i class="fas fa-phone"></i> (664)312-6757</a></li>
+							<li><a href="#"><i class="fas fa-at"></i> bookpedia@contacto.com</a></li>
+							<li><a href="#"><i class="fas fa-map-marked-alt"></i> Av.Sal si puedes,Col. El pipila BC,Mx.</a></li>
+						</ul>
+					</div>
+					<!-- Acccesos rapidos -->
+					<div class="container col-7 col-md-4">
+						<h5>Acceso Rapido</h5>
+						<ul class="list-unstyled">
+							<li><a href="categorias.html">
+								<i class="fas fa-bookmark"></i> Categorias</a>
+							</li>
+							<li><a href="#">
+								<i class="fas fa-book-reader"></i> Autores</a>
+							</li>
+							<li><a href="#">
+								<i class="fab fa-hotjar"></i> Más leeido</a>
+							</li>
+							<li><a href="#">
+								<i class="fas fa-question-circle"></i> Quejas o Sugerencias</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Redes Sociales -->
+					<div class="container-fluid text-center col-md-3 d-none d-md-block">
+						<h5>Redés</h5>
+						<div class="list-group-horizontal redes">
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-facebook"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-instagram"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-whatsapp"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-github"></i></a>
+							</li>
+						</div>
+					</div>
+				</div>
+				<!-- /información en linea -->
+			</div>
+		</div>
+		<!-- footer Movil  -->
+		<div class="container-fluid text-center d-md-none d-block bg-gunmetal py-2">
+			<div class="list-group-horizontal redes">
+				<li class="list-inline-item mr-4">
+					<a href="#"><i class="fab fa-facebook"></i></a>
+				</li>
+				<li class="list-inline-item mr-4">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</li>
+				<li class="list-inline-item mr-4">
+					<a href="#"><i class="fab fa-whatsapp"></i></a>
+				</li>
+				<li class="list-inline-item mr-4">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</li>
+				<li class="list-inline-item mr-4">
+					<a href="#"><i class="fab fa-github"></i></a>
+				</li>
+			</div>
+		</div>
+		<!-- /footer movil -->
+		<div class="container-fluid bg-gunmetal py-3">
+			<div class="row">
+				<div class="container text-center text-warning">
+					Todos los derechos reservados © 2020  | Bookpedia
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /footer -->
+
+</body>
+<!-- Scripts propios -->
+<!-- <script src="js/script.js"></script> -->
+<!-- core js scripts bootstrap -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</h
+tml>
